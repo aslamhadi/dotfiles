@@ -1,3 +1,10 @@
+call plug#begin()
+
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+
+call plug#end()
+
 " Disable Arrow keys in Escape mode
 map <up> <nop>
 map <down> <nop>
