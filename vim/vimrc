@@ -7,6 +7,9 @@ Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
+" fzf
+map <C-p> :Files<CR>
+
 " Disable Arrow keys in Escape mode
 map <up> <nop>
 map <down> <nop>
