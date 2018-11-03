@@ -1,5 +1,7 @@
 call plug#begin()
 
+Plug 'tpope/vim-commentary' " easy way to comment the code
+
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 
