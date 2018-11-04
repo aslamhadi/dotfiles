@@ -12,6 +12,7 @@ call plug#end()
 
 set background=dark
 set encoding=utf-8
+set relativenumber
 
 " fzf
 map <C-p> :Files<CR>
@@ -28,4 +29,3 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
-set number
