@@ -6,13 +6,16 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim' " ack in vim
 Plug 'davidhalter/jedi-vim' " autocomplete syntax
+Plug 'w0rp/ale' " lint engine
 
 call plug#end()
 
 " set background=dark
 set encoding=utf-8
 set relativenumber
+set number " set hybrid mode
 set title 
+set nobackup
 
 " fzf
 map <C-p> :Files<CR>
@@ -20,6 +23,20 @@ map <C-p> :Files<CR>
 " ack remap
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
+
+" ale 
+let g:ale_fixers = {
+    \ 'css': ['prettier'],
+    \ 'javascript': ['prettier'],
+    \ 'python': ['black'],
+    \ }
+let g:ale_linters = {
+    \ 'python': ['flake8'],
+    \ }
+let g:ale_fix_on_save = 1
+let g:ale_virtualenv_dir_names = ['.env', '.venv', 'env', 'venv']
+let g:ale_python_black_options = '--line-length=100 --safe'
+let g:ale_python_flake8_options = '--ignore=E501'
 
 " Disable Arrow keys in Escape mode
 map <up> <nop>
