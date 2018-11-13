@@ -7,6 +7,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'mileszs/ack.vim' " ack in vim
 Plug 'davidhalter/jedi-vim' " autocomplete syntax
 Plug 'w0rp/ale' " lint engine
+Plug 'morhetz/gruvbox' " theme
 
 call plug#end()
 
@@ -16,6 +17,9 @@ set relativenumber
 set number " set hybrid mode
 set title 
 set nobackup
+
+colorscheme gruvbox
+syntax on
 
 " fzf
 map <C-p> :Files<CR>
