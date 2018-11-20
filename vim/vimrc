@@ -8,6 +8,7 @@ Plug 'mileszs/ack.vim' " ack in vim
 Plug 'davidhalter/jedi-vim' " autocomplete syntax
 Plug 'w0rp/ale' " lint engine
 Plug 'morhetz/gruvbox' " theme
+Plug 'scrooloose/nerdtree' " simple tree file manager
 
 call plug#end()
 
@@ -35,6 +36,8 @@ map <C-p> :Files<CR>
 " ack remap
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
+
+let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
 
 " ale 
 let g:ale_fixers = {
