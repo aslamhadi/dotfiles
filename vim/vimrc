@@ -38,6 +38,19 @@ map <C-p> :GFiles<CR>
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
 
+autocmd FileType coffee setlocal shiftwidth=4 tabstop=4
+autocmd FileType cpp setlocal noexpandtab
+autocmd FileType html setlocal shiftwidth=4 tabstop=4
+autocmd FileType htmldjango setlocal shiftwidth=4 tabstop=4
+autocmd FileType java setlocal noexpandtab
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType typescript setlocal shiftwidth=2 tabstop=2
+autocmd FileType scss setlocal shiftwidth=2 tabstop=2
+autocmd FileType css setlocal shiftwidth=2 tabstop=2
+autocmd FileType xhtml setlocal shiftwidth=4 tabstop=4
+autocmd FileType xml setlocal shiftwidth=4 tabstop=4
+autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
+
 let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
 let g:javascript_plugin_jsdoc = 1 " Enables syntax highlighting for JSDocs.
 
