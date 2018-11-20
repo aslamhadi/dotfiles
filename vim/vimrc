@@ -9,6 +9,7 @@ Plug 'davidhalter/jedi-vim' " autocomplete syntax
 Plug 'w0rp/ale' " lint engine
 Plug 'morhetz/gruvbox' " theme
 Plug 'scrooloose/nerdtree' " simple tree file manager
+Plug 'pangloss/vim-javascript' " js syntax highlighting
 
 call plug#end()
 
@@ -38,6 +39,7 @@ cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
 
 let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
+let g:javascript_plugin_jsdoc = 1 " Enables syntax highlighting for JSDocs.
 
 " ale 
 let g:ale_fixers = {
