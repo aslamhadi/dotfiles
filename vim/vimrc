@@ -18,6 +18,7 @@ set encoding=utf-8
 set relativenumber
 set number " set hybrid mode
 set title 
+set hidden " https://stackoverflow.com/questions/17705331/exit-temporary-modified-file-without-saving-and-jump-back-to-my-previous-viewing
 set nobackup
 set background=dark
 set t_Co=256
