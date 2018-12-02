@@ -19,9 +19,11 @@ set relativenumber
 set number " set hybrid mode
 set title 
 set hidden " https://stackoverflow.com/questions/17705331/exit-temporary-modified-file-without-saving-and-jump-back-to-my-previous-viewing
+set exrc " enable per-directory .vimrc files
 set nobackup
 set background=dark
 set t_Co=256
+set expandtab " converts tab to space
 
 if &term =~ '256color'
     " Disable Background Color Erase (BCE) so that color schemes
