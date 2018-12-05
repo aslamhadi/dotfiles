@@ -42,6 +42,7 @@ cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
 
 autocmd FileType coffee setlocal shiftwidth=4 tabstop=4
+autocmd FileType cs setlocal shiftwidth=4 tabstop=4
 autocmd FileType cpp setlocal noexpandtab
 autocmd FileType html setlocal shiftwidth=4 tabstop=4
 autocmd FileType htmldjango setlocal shiftwidth=4 tabstop=4
