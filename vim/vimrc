@@ -10,6 +10,7 @@ Plug 'w0rp/ale' " lint engine
 Plug 'morhetz/gruvbox' " theme
 Plug 'scrooloose/nerdtree' " simple tree file manager
 Plug 'pangloss/vim-javascript' " js syntax highlighting
+Plug 'elixir-editors/vim-elixir' " elixir
 
 call plug#end()
 
