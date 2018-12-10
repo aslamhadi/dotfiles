@@ -1,12 +1,3 @@
-call plug#begin()
-
-Plug 'OmniSharp/omnisharp-vim' " c#
-Plug 'vim-syntastic/syntastic'
-Plug 'tpope/vim-dispatch'
-Plug 'SirVer/ultisnips'
-
-call plug#end()
-
 " OmniSharp won't work without this setting
 filetype plugin on
 
@@ -90,3 +81,5 @@ nnoremap <Leader>th :OmniSharpHighlightTypes<CR>
 
 " Enable snippet completion
 let g:OmniSharp_want_snippet=1
+
+map <C-p> :Files<CR>
