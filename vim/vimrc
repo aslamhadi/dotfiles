@@ -15,6 +15,7 @@ Plug 'elixir-editors/vim-elixir' " elixir
 " Plug 'tpope/vim-dispatch'
 " Plug 'SirVer/ultisnips'
 Plug 'epeli/slimux' " slimux integration
+Plug 'posva/vim-vue' " vuejs
 
 call plug#end()
 
