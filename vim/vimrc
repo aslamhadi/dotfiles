@@ -10,10 +10,10 @@ Plug 'morhetz/gruvbox' " theme
 Plug 'scrooloose/nerdtree' " simple tree file manager
 Plug 'pangloss/vim-javascript' " js syntax highlighting
 Plug 'elixir-editors/vim-elixir' " elixir
-Plug 'OmniSharp/omnisharp-vim' " c#
-Plug 'vim-syntastic/syntastic'
-Plug 'tpope/vim-dispatch'
-Plug 'SirVer/ultisnips'
+" Plug 'OmniSharp/omnisharp-vim' " c#
+" Plug 'vim-syntastic/syntastic'
+" Plug 'tpope/vim-dispatch'
+" Plug 'SirVer/ultisnips'
 Plug 'epeli/slimux' " slimux integration
 
 call plug#end()
