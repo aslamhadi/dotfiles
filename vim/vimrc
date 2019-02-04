@@ -40,7 +40,7 @@ colorscheme gruvbox
 syntax on
 
 " fzf
-map <C-p> :GFiles<CR>
+map <C-p> :Files<CR>
 
 " ack remap
 cnoreabbrev Ack Ack!
@@ -59,9 +59,11 @@ autocmd FileType css setlocal shiftwidth=2 tabstop=2
 autocmd FileType xhtml setlocal shiftwidth=4 tabstop=4
 autocmd FileType xml setlocal shiftwidth=4 tabstop=4
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
+autocmd FileType ex setlocal shiftwidth=2 tabstop=2
 
 let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
 let g:javascript_plugin_jsdoc = 1 " Enables syntax highlighting for JSDocs.
+let g:python3_host_prog = '/usr/bin/python3.6'
 
 " ale 
 let g:ale_fixers = {
@@ -74,8 +76,8 @@ let g:ale_linters = {
     \ }
 let g:ale_fix_on_save = 1
 let g:ale_virtualenv_dir_names = ['.env', '.venv', 'env', 'venv']
-let g:ale_python_black_options = '--line-length=100 --safe'
 let g:ale_python_flake8_options = '--ignore=E501'
+" let g:ale_python_flake8_executable ='/home/aslam/.local/bin/flake8'
 
 " Disable Arrow keys in Escape mode
 map <up> <nop>
