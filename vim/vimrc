@@ -62,6 +62,7 @@ autocmd FileType xhtml setlocal shiftwidth=4 tabstop=4
 autocmd FileType xml setlocal shiftwidth=4 tabstop=4
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 autocmd FileType ex setlocal shiftwidth=2 tabstop=2
+autocmd FileType re setlocal shiftwidth=2 tabstop=2
 
 let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
 let g:javascript_plugin_jsdoc = 1 " Enables syntax highlighting for JSDocs.
