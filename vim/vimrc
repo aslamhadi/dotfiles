@@ -16,6 +16,7 @@ Plug 'elixir-editors/vim-elixir' " elixir
 " Plug 'SirVer/ultisnips'
 Plug 'epeli/slimux' " slimux integration
 Plug 'posva/vim-vue' " vuejs
+Plug 'autozimu/LanguageClient-neovim', {'branch': 'next', 'do': './install.sh'}
 Plug 'reasonml-editor/vim-reason-plus'
 
 call plug#end()
@@ -62,7 +63,7 @@ autocmd FileType xhtml setlocal shiftwidth=4 tabstop=4
 autocmd FileType xml setlocal shiftwidth=4 tabstop=4
 autocmd FileType yaml setlocal shiftwidth=2 tabstop=2
 autocmd FileType ex setlocal shiftwidth=2 tabstop=2
-autocmd FileType re setlocal shiftwidth=2 tabstop=2
+autocmd FileType reason setlocal shiftwidth=2 tabstop=2
 
 let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
 let g:javascript_plugin_jsdoc = 1 " Enables syntax highlighting for JSDocs.
@@ -81,6 +82,11 @@ let g:ale_fix_on_save = 1
 let g:ale_virtualenv_dir_names = ['.env', '.venv', 'env', 'venv']
 let g:ale_python_flake8_options = '--ignore=E501'
 " let g:ale_python_flake8_executable ='/home/aslam/.local/bin/flake8'
+
+" language client
+let g:LanguageClient_serverCommands = {
+    \ 'reason': ['~/bin/reason-language-server.exe'],
+    \ }
 
 " Disable Arrow keys in Escape mode
 map <up> <nop>
