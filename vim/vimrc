@@ -48,6 +48,8 @@ map <C-p> :Files<CR>
 " ack remap
 cnoreabbrev Ack Ack!
 nnoremap <Leader>a :Ack!<Space>
+" quit from terminal nvim
+tnoremap <Leader><ESC> <C-\><C-n>
 
 autocmd FileType coffee setlocal shiftwidth=4 tabstop=4
 autocmd FileType cs setlocal shiftwidth=4 tabstop=4
