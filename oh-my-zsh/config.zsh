@@ -6,7 +6,7 @@ export PATH="$HOME/bin:$HOME/.local/bin:/snap/bin:$HOME/.yarn/bin:$HOME/.config/
 # pipenv
 export PIPENV_VENV_IN_PROJECT=1
 
-eval "$(direnv hook zsh)"
+#eval "$(direnv hook zsh)"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -15,7 +15,7 @@ export NVM_DIR="$HOME/.nvm"
 export TERM=xterm-256color
 export EDITOR='vim'
 
-# ZSH_THEME="terminalparty"
+ZSH_THEME="nox"
 
 ## set colors for LS_COLORS
 # eval `dircolors ~/.dircolors`
