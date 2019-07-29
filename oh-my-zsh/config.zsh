@@ -7,6 +7,7 @@ export PATH="$HOME/bin:$HOME/.local/bin:/snap/bin:$HOME/.yarn/bin:$HOME/.config/
 export PIPENV_VENV_IN_PROJECT=1
 
 #eval "$(direnv hook zsh)"
+eval `dircolors $HOME/projects/dircolors-solarized/dircolors.256dark`
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
