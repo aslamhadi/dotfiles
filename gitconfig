@@ -1,1 +1,5 @@
-/home/aslam/.gitconfig
+[user]
+	email = aslamhadi@gmail.com
+	name = Aslam Hadi Harsono
+[core]
+	excludesfile = ~/.gitignore_global

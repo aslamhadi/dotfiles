@@ -1,0 +1,6 @@
+.envrc
+.vimrc
+.nvimrc
+.venv/*
+aslam_settings.py
+resetdb2.sh
