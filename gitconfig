@@ -3,3 +3,7 @@
 	name = Aslam Hadi Harsono
 [core]
 	excludesfile = ~/.gitignore_global
+[url "git@gitlab.com:"]
+	insteadOf = https://gitlab.com/
+[url "git@gitlab.kumparan.com:"]
+	insteadOf = https://gitlab.kumparan.com/
