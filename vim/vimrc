@@ -25,6 +25,8 @@ Plug 'ncm2/ncm2'  " formerly nvim-completion-manager
 Plug 'ncm2/ncm2-tmux'
 Plug 'ncm2/ncm2-path'
 Plug 'ncm2/ncm2-jedi'
+Plug 'itchyny/lightline.vim'
+Plug 'mengelbrecht/lightline-bufferline'
 
 call plug#end()
 
@@ -38,6 +40,8 @@ set exrc " enable per-directory .vimrc files
 set nobackup
 set background=dark
 set t_Co=256
+set laststatus=2
+set showtabline=2
 set expandtab " converts tab to space
 
 if &term =~ '256color'
@@ -81,6 +85,24 @@ set completeopt=noinsert,menuone,noselect
 let NERDTreeIgnore = ['\.pyc$', '\.pdf$', '__pycache__']
 let g:javascript_plugin_jsdoc = 1 " Enables syntax highlighting for JSDocs.
 let g:python3_host_prog = '/usr/bin/python3.6'
+
+" lightline buffer
+let g:lightline = {
+      \ 'colorscheme': 'wombat',
+      \ }
+
+let g:lightline#bufferline#show_number = 1
+let g:lightline#bufferline#shorten_path = 1
+let g:lightline#bufferline#unnamed = '[No Name]'
+
+" let g:lightline                  = {}
+let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.component_type   = {'buffers': 'tabsel'}
+
+nnoremap <C-l> :bnext<CR>
+nnoremap <C-h> :bprevious<CR>
+nnoremap <leader>bd :1,100bd<CR>
 
 " ale 
 let g:ale_fixers = {
