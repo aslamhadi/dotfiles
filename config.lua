@@ -7,6 +7,16 @@ lvim.keys.normal_mode["<C-s>"] = ":w<cr>" -- control+save
 lvim.builtin.treesitter.ensure_installed = {
   "go",
   "gomod",
+  "elixir",
+  "heex",
+}
+
+lvim.lsp.installer.setup.ensure_installed = {
+  "lua_ls",
+  "cssls",
+  "tsserver",
+  "tailwindcss",
+  "elixirls"
 }
 
 lvim.builtin.telescope.defaults.layout_strategy = 'vertical'
@@ -26,9 +36,9 @@ lvim.plugins = {
   "ellisonleao/gruvbox.nvim",
 }
 
-lvim.colorscheme = "catppuccin-latte"
-lvim.colorscheme = "gruvbox"
--- vim.opt.background = "dark"
+lvim.colorscheme = "catppuccin"
+-- lvim.colorscheme = "gruvbox"
+vim.opt.background = "light"
 
 
 ------------------------
@@ -58,7 +68,19 @@ dapgo.setup()
 ------------------------
 -- LSP
 ------------------------
-vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "gopls" })
+vim.list_extend(lvim.lsp.automatic_configuration.skipped_servers, { "gopls", "tailwindcss" })
+
+local opts = {
+  root_dir = function(fname)
+    local util = require "lspconfig/util"
+    return util.root_pattern("assets/tailwind.config.js", "tailwind.config.js", "tailwind.config.cjs", "tailwind.js",
+      "tailwind.cjs")(fname)
+  end,
+  init_options = {
+    userLanguages = { heex = "html", elixir = "html" }
+  },
+}
+require("lvim.lsp.manager").setup("tailwindcss", opts)
 
 local lsp_manager = require "lvim.lsp.manager"
 lsp_manager.setup("golangci_lint_ls", {
